@@ -4,14 +4,14 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 ## Table of contents
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [My process](#my-process)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
 ## Overview
 
@@ -19,10 +19,10 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
--   Hide/Show the answer to a question when the question is clicked
--   Navigate the questions and hide/show answers using keyboard navigation alone
--   View the optimal layout for the interface depending on their device's screen size
--   See hover and focus states for all interactive elements on the page
+- Hide/Show the answer to a question when the question is clicked
+- Navigate the questions and hide/show answers using keyboard navigation alone
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
@@ -31,17 +31,17 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/Ayako-Yokoe/faq-accordion-main)
+- Live Site URL: [Vercel](https://faq-accordion-ten-steel.vercel.app/)
 
 ## My process
 
 ### Built with
 
--   Semantic HTML5 markup
--   CSS custom properties
--   Flexbox
--   Mobile-first workflow
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 
 ### What I learned
 
@@ -49,37 +49,33 @@ I learned how to create an accordion using vanilla JavaScript. I found it very u
 
 ```html
 <div class="question-wrapper">
-    <h2
-        class="question"
-        tabindex="0"
-        aria-expanded="false"
-        aria-controls="faq1"
-    >
-        question
-    </h2>
-    ...
+  <h2 class="question" tabindex="0" aria-expanded="false" aria-controls="faq1">
+    question
+  </h2>
+  ...
 </div>
 <div id="faq1" class="hidden">
-    <p>answer</p>
+  <p>answer</p>
 </div>
 ```
 
 ```css
 .hidden {
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .visible {
-    height: 90px;
-    opacity: 1;
-    transition: height 0.3s ease-in-out, opacity 0.3s ease-in;
+  height: 90px;
+  opacity: 1;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in;
 }
 ```
 
 ### Continued development
 
 I got stuck on styling when the height changed. I'll continue learning about CSS. In addition, I'll learn more about the usage of ARIA attributes.
+
 # faq-accordion-main
