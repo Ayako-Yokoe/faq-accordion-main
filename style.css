@@ -1,0 +1,161 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+	--color-light-pink: hsl(275, 100%, 97%);
+	--color-grayish-purple: hsl(293, 16%, 49%);
+	--color-dark-purple: hsl(292, 42%, 14%);
+}
+
+@font-face {
+	font-family: "WorkSans";
+	src: url("assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "WorkSans";
+	src: url("assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "WorkSans";
+	src: url("assets/fonts/static/WorkSans-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "WorkSans", sans-serif;
+	background-color: var(--color-light-pink);
+}
+
+main {
+	background: url("./assets/images/background-pattern-mobile.svg") no-repeat top;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+}
+
+section {
+	max-width: 320px;
+	overflow-y: auto;
+	height: auto;
+	margin: 148px auto;
+	background-color: var(--color-white);
+	padding: 1.6rem;
+	border-radius: 10px;
+}
+
+.header-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.star-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+article {
+	border-bottom: 1px solid rgba(140, 105, 145, 0.1);
+	padding: 1.2rem 0;
+}
+
+article:last-child {
+	border-bottom: none;
+}
+
+.question-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.2rem;
+	margin-bottom: 1.2rem;
+	cursor: pointer;
+}
+
+.question-wrapper:hover .question,
+.question-wrapper:focus .question {
+	color: rgb(208, 6, 208);
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+p {
+	font-size: 0.8rem;
+	color: var(--color-grayish-purple);
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.hidden {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: 
+		height 0.3s ease-in-out,
+		opacity 0.3s ease-in-out;
+}
+
+.visible {
+	height: 90px;
+	opacity: 1;
+	transition: 
+		height 0.3s ease-in-out,
+		opacity 0.3s ease-in;
+}
+
+.hidden-icon {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		background: url("./assets/images/background-pattern-desktop.svg") no-repeat top;
+	}
+	
+	section {
+		max-width: 600px;
+		margin: 210px auto;
+	}
+	
+	.star-icon {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1.3rem;
+	}
+	
+	h1 {
+		font-size: 3rem;
+	}
+	
+	h2 {
+		font-size: 1.2rem;
+	}
+	
+	p {
+		font-size: 16px;
+	}
+
+	.visible {
+		height: 60px;
+	}
+}
